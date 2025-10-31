@@ -1,0 +1,124 @@
+#le-link-extractor-panel {
+  position: fixed;
+  background: #ffffff;
+  border: 1px solid #fb7185;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100000; /* 提高 z-index 以确保可见 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  width: 300px;
+  min-height: 40px;
+  display: none; /* 默认隐藏，通过 JS 显示 */
+  transition: all 0.3s ease;
+  left: 50px;
+  top: 50px;
+}
+
+#le-panel-header {
+  background: linear-gradient(135deg, #c026d3, #14b8a6);
+  color: #ffffff;
+  padding: 10px 12px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#le-panel-content {
+  padding: 14px;
+  display: block;
+}
+
+#le-detect-btn {
+  background: linear-gradient(135deg, #a21caf, #f43f5e);
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+#le-detect-btn:hover {
+  background: linear-gradient(135deg, #86198f, #e11d48);
+  transform: translateY(-1px);
+}
+
+#le-results-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.le-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background: #ffe4e6;
+  border: 1px solid #fb7185;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.le-result-item:hover {
+  background: #fecdd3;
+}
+
+.le-result-text {
+  flex-grow: 1;
+  word-break: break-all;
+  color: #9f1239;
+  font-size: 12px;
+}
+
+.le-delete-btn {
+  background: linear-gradient(135deg, #ff4f00, #ffd700);
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 8px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.le-delete-btn:hover {
+  background: linear-gradient(135deg, #e63900, #facc15);
+  transform: translateY(-1px);
+}
+
+#le-button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#le-copy-btn, #le-export-btn {
+  background: linear-gradient(135deg, #a21caf, #f43f5e);
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.1s;
+  flex: 1;
+}
+
+#le-copy-btn:hover, #le-export-btn:hover {
+  background: linear-gradient(135deg, #86198f, #e11d48);
+  transform: translateY(-1px);
+}
